@@ -68,7 +68,7 @@ func ValidationResource(r *models.GenericResource) ValidationResult {
 
 	switch r.Kind {
 	case models.KindAgent:
-		errs = append(errs, validateAgent(r.Spec)...)
+		errs = append(errs, validateAgentSpec(r.Spec)...)
 	case models.KindTool:
 		errs = append(errs, validateToolSpec(r.Spec)...)
 	case models.KindGuardrail:

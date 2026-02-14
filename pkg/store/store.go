@@ -1,7 +1,6 @@
 package store
 
 import (
-	"github.com/Promptonauts/Pipe/pkg/models"
 	"github.com/Promptonauts/pipe/pkg/models"
 )
 

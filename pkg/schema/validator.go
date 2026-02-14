@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/Promptonauts/Pipe/pkg/models"
+	"github.com/Promptonauts/pipe/pkg/models"
 )
 
 type ValidationError struct {
@@ -31,7 +31,7 @@ func ValidationResource(r *models.GenericResource) ValidationResult {
 	if r.Kind == "" {
 		errs = append(errs, ValidationError{Field: "kind", Message: "required"})
 	} else {
-		if _, err := models.ParseResourceKind(string(r.kind)); err != nil {
+		if _, err := models.ParseResourceKind(string(r.Kind)); err != nil {
 			errs = append(errs, ValidationError{Field: "kind", Message: err.Error()})
 		}
 	}
